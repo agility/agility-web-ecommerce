@@ -15,7 +15,7 @@ namespace Agility.Web.eCommerce.API
 
         public AgilityeCommerceService()
         {
-            BaseUri = "http://ecommerce.dev.edentity.ca/";/*Config.eCommerceSettings.Url;*/
+            BaseUri = Config.eCommerceSettings.Url;
             AuthHash = Config.eCommerceSettings.Hash();
         }
 
@@ -70,7 +70,7 @@ namespace Agility.Web.eCommerce.API
             {
                 var headers = new Dictionary<string, string>()
                 {
-                    { "WebsiteName", "Visit Orlando" },
+                    { "WebsiteName", Config.eCommerceSettings.WebsiteName },
                     { "Authorization", GetAuthHeader() }
                 };
 

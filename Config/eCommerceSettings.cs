@@ -36,6 +36,15 @@ namespace Agility.Web.eCommerce.Config
             }
         }
 
+        public static string WebsiteName
+        {
+            get
+            {
+                var s = ConfigurationManager.AppSettings["WebsiteName"];
+                return s;
+            }
+        }
+
         public static int QAMode
         {
             get
