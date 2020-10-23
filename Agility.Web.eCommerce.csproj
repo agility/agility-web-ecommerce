@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0A7BDB1C-CDA9-4DF6-A96F-1AC9F9513C8E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Agility.Web.eCommerce</RootNamespace>
+    <AssemblyName>Agility.Web.eCommerce</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\net461\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\net452\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Staging|AnyCPU'">
+    <OutputPath>bin\Staging\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Azure-USA|AnyCPU'">
+    <OutputPath>bin\Azure-USA\</OutputPath>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Production|AnyCPU'">
+    <OutputPath>bin\Production\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Agility.Web, Version=5.0.1710.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Agility.Web.5.0.1710\lib\net461\Agility.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="API\Enum\CardType.cs" />
+    <Compile Include="API\Methods\AddressManagement.cs" />
+    <Compile Include="API\Methods\CustomerManagement.cs" />
+    <Compile Include="API\Methods\CustomManagement.cs" />
+    <Compile Include="API\Methods\OrderCommentManagement.cs" />
+    <Compile Include="API\Methods\OrderManagement.cs" />
+    <Compile Include="API\eCommerceHttpClient.cs" />
+    <Compile Include="API\JsonResponse.cs" />
+    <Compile Include="API\Methods\ProductManagment.cs" />
+    <Compile Include="API\Methods\ReturnsManagement.cs" />
+    <Compile Include="API\Methods\ShipmentManagement.cs" />
+    <Compile Include="API\Methods\StoreCreditManagement.cs" />
+    <Compile Include="API\Methods\SubscriptionsManagement.cs" />
+    <Compile Include="API\Methods\TicketManagement.cs" />
+    <Compile Include="API\Models\AltPrice.cs" />
+    <Compile Include="API\Models\Callbacks\AbandonedCartCallback.cs" />
+    <Compile Include="API\Models\Callbacks\CustomerUpdateCallback.cs" />
+    <Compile Include="API\Models\Callbacks\OrderCommentCallback.cs" />
+    <Compile Include="API\Models\Callbacks\ReturnStatusUpdateCallback.cs" />
+    <Compile Include="API\Models\Callbacks\OrderNotificationCallback.cs" />
+    <Compile Include="API\Models\Callbacks\OrderStatusUpdateCallback.cs" />
+    <Compile Include="API\Models\Callbacks\ShipmentStatusUpdateCallback.cs" />
+    <Compile Include="API\Models\Currency.cs" />
+    <Compile Include="API\Models\Customer.cs" />
+    <Compile Include="API\Models\ImportAPIProduct.cs" />
+    <Compile Include="API\Models\ImportResponse.cs" />
+    <Compile Include="API\Models\ListingOrder.cs" />
+    <Compile Include="API\Models\OrderItemReturn.cs" />
+    <Compile Include="API\Models\OrderItemReturnStatus.cs" />
+    <Compile Include="API\Models\OrderListSource.cs" />
+    <Compile Include="API\Models\OrderListState.cs" />
+    <Compile Include="API\Models\OrderLog.cs" />
+    <Compile Include="API\Models\OrderReceipt.cs" />
+    <Compile Include="API\Models\StoreCreditListing.cs" />
+    <Compile Include="API\Models\OrderItemStatus.cs" />
+    <Compile Include="API\Models\OrderItemStatusUpdate.cs" />
+    <Compile Include="API\Models\StoreCredit.cs" />
+    <Compile Include="API\Models\Subscription.cs" />
+    <Compile Include="API\Models\SubscriptionInterval.cs" />
+    <Compile Include="API\Models\SubscriptionItem.cs" />
+    <Compile Include="API\Models\TransactionLog.cs" />
+    <Compile Include="Checkout\CheckoutServiceResult.cs" />
+    <Compile Include="Subscriptions\SubscriptionNotificationRequest.cs" />
+    <Compile Include="Subscriptions\SubscriptionNotificationResult.cs" />
+    <Compile Include="Taxes\BridgeTaxRate.cs" />
+    <Compile Include="Taxes\ITaxable.cs" />
+    <Compile Include="Taxes\ITaxCalculator.cs" />
+    <Compile Include="API\Models\Listing.cs" />
+    <Compile Include="API\Models\OrderComment.cs" />
+    <Compile Include="API\Models\OrderFulfillment.cs" />
+    <Compile Include="API\Models\OrderItemAttachment.cs" />
+    <Compile Include="API\Models\OrderItemFulfillment.cs" />
+    <Compile Include="API\Models\OrderStatus.cs" />
+    <Compile Include="API\Models\PrintTemplate.cs" />
+    <Compile Include="API\Models\Product.cs" />
+    <Compile Include="API\Models\ProductVariantMeasure.cs" />
+    <Compile Include="API\Models\Promotion.cs" />
+    <Compile Include="API\Models\Shipment.cs" />
+    <Compile Include="API\Models\ShipmentStatus.cs" />
+    <Compile Include="Taxes\ITaxRate.cs" />
+    <Compile Include="Taxes\PromoTaxCalculator.cs" />
+    <Compile Include="Taxes\TaxCalculator.cs" />
+    <Compile Include="Taxes\TaxCustom.cs" />
+    <Compile Include="Taxes\TaxServiceResult.cs" />
+    <Compile Include="API\Models\TerminalLocation.cs" />
+    <Compile Include="API\Models\TerminalUser.cs" />
+    <Compile Include="API\Models\Ticket.cs" />
+    <Compile Include="API\Models\TicketVariantMeasure.cs" />
+    <Compile Include="API\Models\Transaction.cs" />
+    <Compile Include="API\AgilityeCommerceService.cs" />
+    <Compile Include="API\Models\Address.cs" />
+    <Compile Include="API\Models\CustomStoredProcedureResult.cs" />
+    <Compile Include="API\Models\ModelBase.cs" />
+    <Compile Include="API\Models\Order.cs" />
+    <Compile Include="Taxes\Tax.cs" />
+    <Compile Include="Taxes\TaxItem.cs" />
+    <Compile Include="API\Models\TerminalOrder.cs" />
+    <Compile Include="Config\eCommerceSettings.cs" />
+    <Compile Include="Helpers\Helpers.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Test.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="API\Models\OrderItem.cs" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\BioSteel\Biosteel+Netsuite\Agility.RestAPIClient\Agility.RestAPI.csproj">
+      <Project>{0474D8E2-297B-4DC6-9233-193C28388D5C}</Project>
+      <Name>Agility.RestAPI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

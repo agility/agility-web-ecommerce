@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/01/nuspec.xsd">
+  <metadata minClientVersion="2.5">
+    <id>Agility.Web.eCommerce</id>
+    <version>0.1.0-alpha6</version>
+    <title>Agility.Web.eCommerce</title>
+    <authors>Agility Inc.</authors>
+    <owners>Agility Inc.</owners>
+    <projectUrl>http://www.agilitycms.com/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+      Base framework for Agility eCommerce projects with Agility CMS. For documentation visit http://developer.agilitycms.com/
+    </description>
+    <iconUrl>http://cdn.agilitycms.com/agility-cms-website/agility-fav.png</iconUrl>
+    <summary>
+    </summary>
+    <releaseNotes>
+      - Added Products AdditionalJSON
+    </releaseNotes>
+    <copyright>Copyright (c) 2017 Agility CMS</copyright>
+    <language />
+    <tags>Agility Cms AspNet AspNetMvc</tags>
+    <dependencies>
+      <group targetFramework=".NETFramework4.6.1">
+        <dependency id="Agility.Web" version="5.0.1512.1" />
+        <dependency id="Microsoft.AspNet.Mvc" version="5.2.3" />
+        <dependency id="Microsoft.AspNet.Razor" version="3.2.3" />
+        <dependency id="Microsoft.AspNet.WebPages" version="3.2.3" />
+        <dependency id="Microsoft.Web.Infrastructure" version="1.0.0.0" />
+        <dependency id="Newtonsoft.Json" version="10.0.3" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Release\**Agility.Web.eCommerce.dll" target="lib" />
+    <file src="bin\Release\**Agility.Web.eCommerce.xml" target="lib" />
+  </files>
+</package>
